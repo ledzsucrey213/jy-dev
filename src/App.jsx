@@ -8,6 +8,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Contact from "./pages/Contact/Contact";
 import About from "./pages/About/About";
+import Services from "./pages/Services/Services";
+import HowItWorks from "./pages/HowItWorks/HowItWorks";
 
 const App = () => {
   useEffect(() => {

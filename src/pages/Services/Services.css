@@ -1,0 +1,76 @@
+.services-container {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 4rem 2rem;
+    background: rgba(12, 13, 64, 0.95);
+    border-radius: 20px;
+    color: white;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .services-title-bg {
+    font-size: 4rem;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.05);
+    position: absolute;
+    top: -40px;
+    left: 2rem;
+    z-index: 0;
+    pointer-events: none;
+  }
+  
+  .service-block {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+  }
+  
+  .service-block.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .service-content {
+    flex: 1;
+    z-index: 1;
+  }
+  
+  .service-content h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  .service-content p {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 1rem;
+  }
+  
+  .price-note {
+    font-size: 1.1rem;
+    color: #ad61ff;
+    font-weight: bold;
+  }
+  
+  .service-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .service-image img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  }
+  
+  .highlight {
+    color: rgba(173, 97, 255, 0.75);
+  }
+  
