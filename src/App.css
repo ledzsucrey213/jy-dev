@@ -1,0 +1,140 @@
+body {
+  background: 
+    radial-gradient(
+      circle at center bottom,
+      rgba(173, 97, 255, 0.75) 0%,
+      rgba(60, 0, 100, 0.6) 25%,
+      #0C0D40 50%
+    ),
+    linear-gradient(to bottom, #0C0D40, #0C0D40);
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  cursor: none; /* Masque le curseur par défaut */
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.hero-section {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+.slogan {
+  font-size: 3rem;
+  font-weight: bold;
+  z-index: 2;
+  color: #fff;
+  max-width: 800px;
+}
+
+.blob {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 0, 150, 0.5), transparent);
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: float 10s infinite ease-in-out alternate;
+  z-index: 1;
+  filter: blur(60px);
+}
+
+.blob1 {
+  top: 10%;
+  left: 10%;
+  background: radial-gradient(circle, rgba(255, 0, 255, 0.4), transparent);
+}
+
+.blob2 {
+  top: 40%;
+  right: 15%;
+  background: radial-gradient(circle, rgba(0, 255, 255, 0.4), transparent);
+  animation-delay: 2s;
+}
+
+.blob3 {
+  bottom: 10%;
+  left: 30%;
+  background: radial-gradient(circle, rgba(255, 255, 0, 0.4), transparent);
+  animation-delay: 4s;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) scale(1);
+  }
+  100% {
+    transform: translateY(-30px) scale(1.1);
+  }
+}
+
+/* Autres styles initiaux */
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Style pour le curseur personnalisé */
+.custom-cursor {
+  position: fixed;
+  width: 16px;
+  height: 16px;
+  background-color: rgba(129, 18, 249, 0.75);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference; /* optionnel : donne un effet visuel sympa */
+}
+
+
+/* Empêche le curseur par défaut d'apparaître sur les boutons */
+*, button, a, input, textarea, select {
+  cursor: none !important; /* Masque le curseur par défaut sur les boutons et les liens */
+}

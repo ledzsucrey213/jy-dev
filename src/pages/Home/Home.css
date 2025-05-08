@@ -1,0 +1,66 @@
+/* src/pages/Home.css */
+.hero-section {
+    position: relative;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    padding: 2rem;
+    position: relative; /* nécessaire si tu veux utiliser z-index sur les blobs */
+    z-index: 1;
+  }
+  
+  .slogan {
+    font-size: 3rem;
+    font-weight: bold;
+    z-index: 2;
+    color: #fff;
+    max-width: 800px;
+  }
+  
+  .blob {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 0, 150, 0.5), transparent);
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: float 10s infinite ease-in-out alternate;
+    z-index: 1;
+    filter: blur(60px);
+  }
+  
+  .blob1 {
+    top: 10%;
+    left: 10%;
+    background: radial-gradient(circle, rgba(255, 0, 255, 0.4), transparent);
+  }
+  
+  .blob2 {
+    top: 40%;
+    right: 15%;
+    background: radial-gradient(circle, rgba(0, 255, 255, 0.4), transparent);
+    animation-delay: 2s;
+  }
+  
+  .blob3 {
+    bottom: 10%;
+    left: 30%;
+    background: radial-gradient(circle, rgba(255, 255, 0, 0.4), transparent);
+    animation-delay: 4s;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0px) scale(1);
+    }
+    100% {
+      transform: translateY(-30px) scale(1.1);
+    }
+  }
+  
+
+
+  
