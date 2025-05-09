@@ -20,7 +20,7 @@ const Services = () => {
             <p className="price-note">Websites starting at just <strong>€600</strong></p>
           </div>
           <div className="service-image">
-            <img src="/default-website.jpg" alt="Website Example" />
+            <img src="/burger-website.PNG" alt="Website Example" />
           </div>
         </section>
 
