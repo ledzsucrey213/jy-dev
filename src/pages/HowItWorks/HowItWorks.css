@@ -1,0 +1,224 @@
+.how-container {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 2rem;
+    background: rgba(12, 13, 64, 0.95);
+    border-radius: 20px;
+    position: relative;
+    color: white;
+    z-index: 1;
+  }
+
+  .how-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+    color: white;
+  }
+  
+  .how-intro-title {
+    color: rgba(255, 255, 255, 0.07);
+    font-size: 4.2rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+  }
+  
+  .how-intro-text {
+    font-size: 1.3rem;
+    color: #fff;
+    line-height: 1.6;
+  }
+  
+  
+  .how-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+  }
+  
+  .how-tag {
+    background: transparent;
+    border: 2px solid rgba(173, 97, 255, 0.8);
+    padding: 0.75rem 1.5rem;
+    border-radius: 10px;
+    color: rgba(173, 97, 255, 0.95);
+    font-weight: bold;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(173, 97, 255, 0.1);
+    outline: none;
+  }
+
+  .how-toggle:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  
+  .how-tag:hover,
+  .how-tag.active {
+    background: rgba(173, 97, 255, 0.1);
+    transform: scale(1.05);
+  }
+  
+  .how-details {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+
+.how-item.visible {
+  display: flex;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+  
+  .how-texts h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 0.5rem;
+  }
+  
+  .how-texts p {
+    font-size: 1rem;
+    color: #ccc;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+
+  .how-link {
+    color: #ad61ff;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  .how-link:hover {
+    color: #fff;
+    text-decoration: none;
+    opacity: 0.85;
+  }
+  
+
+  .how-item {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 0 0.5rem; /* haut et bas réduits */
+    transition: padding 0.3s ease;
+  }
+  
+  .how-item.open {
+    padding: 1.5rem 0; /* espace normal quand ouvert */
+  }
+ 
+  
+  .how-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.05);
+    min-width: 50px; 
+  }
+  
+  
+  .how-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.05);
+    min-width: 60px;
+  }
+  
+  .how-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: white;
+    line-height: 1.2;
+    margin: 0;
+    flex: 1;
+    text-align: left;
+  }
+  
+  
+  .how-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* ✅ pousse le + à droite */
+    gap: 1rem;
+    position: relative;
+  }
+  
+  
+  .how-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    width: 2.4rem;
+    height: 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+    outline: none;
+    padding: 0;
+  }
+  
+  .how-toggle.rotated {
+    transform: rotate(45deg);
+  }
+  .how-icon {
+    width: 2.2rem;
+    height: 2.2rem;
+    stroke: rgba(173, 97, 255, 0.95); /* violet par défaut */
+    stroke-width: 1.4;
+    transition: stroke 0.3s ease;
+  }
+  
+  .how-icon.white {
+    stroke: white;
+  }
+  
+  
+  
+  .how-content-inner {
+    margin-left: 60px; /* ✅ identique à .how-number min-width */
+    padding-right: 1rem;
+  }
+  
+  
+
+  
+  
+  .how-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+  }
+
+  
+  .how-description {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.6;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .how-content-wrapper {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+    opacity: 0;
+  }
+  
+  .how-content-wrapper.open {
+    max-height: 300px; /* suffisamment pour ton contenu */
+    opacity: 1;
+  }
+  
