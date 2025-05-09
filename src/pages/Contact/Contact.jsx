@@ -1,31 +1,102 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Contact.css";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    company: "",
+    email: "",
+    phone: "",
+    need: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      await fetch("https://script.google.com/macros/s/AKfycbzq328TufDokMgDSJwwQaxDg8sDHs_N9HLwpEARqAKNyHY0HNZXR3AMJPkf0f5DNlcVLQ/exec", {
+        method: "POST",
+        mode: "no-cors",
+        body: JSON.stringify(formData),
+        headers: { "Content-Type": "application/json" },
+      });
+      alert("Message envoyé avec succès !");
+      setFormData({
+        name: "",
+        company: "",
+        email: "",
+        phone: "",
+        need: "",
+        message: "",
+      });
+    } catch (error) {
+      alert("Une erreur est survenue.");
+      console.error(error);
+    }
+  };
+
   return (
     <div className="contact-container">
-      {/* Formulaire */}
       <div className="contact-form">
         <h2>Contact us</h2>
         <p>We will get back to you in the next 48 hours.</p>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="form-row">
-            <input type="text" placeholder="Name *" required />
-            <input type="text" placeholder="Company" />
+            <input
+              type="text"
+              name="name"
+              placeholder="Name *"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="text"
+              name="company"
+              placeholder="Company"
+              value={formData.company}
+              onChange={handleChange}
+            />
           </div>
           <div className="form-row">
-            <input type="email" placeholder="Email *" required />
-            <input type="tel" placeholder="Phone Number *" required />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email *"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="tel"
+              name="phone"
+              placeholder="Phone Number *"
+              value={formData.phone}
+              onChange={handleChange}
+              required
+            />
           </div>
           <div className="form-row">
-            <select>
-            <option disabled selected>What do you need?</option>
-            <option>Web Application</option>
-            <option>Mobile Application</option>
-            <option>Both Web & Mobile Applications</option>
+            <select name="need" value={formData.need} onChange={handleChange} required>
+              <option disabled value="">What do you need?</option>
+              <option>Web Application</option>
+              <option>Mobile Application</option>
+              <option>Both Web & Mobile Applications</option>
             </select>
           </div>
-          <textarea placeholder="Tell us more..." rows="5"></textarea>
+          <textarea
+            name="message"
+            placeholder="Tell us more..."
+            rows="5"
+            value={formData.message}
+            onChange={handleChange}
+          ></textarea>
           <button type="submit">SUBMIT</button>
         </form>
       </div>
