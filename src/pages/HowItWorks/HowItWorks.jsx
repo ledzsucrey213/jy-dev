@@ -14,35 +14,35 @@ const serviceDetails = [
     content: 'A clear and reliable approach, perfect for classic showcase websites. Each step is well-managed — from brief to launch — for a smooth and professional result.\\nClick here to see the details.',
             // 'Une approche simple et solide, parfaite pour les sites vitrines classiques. 
             // Chaque étape est maîtrisée, du brief à la mise en ligne, pour un rendu professionnel et à votre guise.\\Cliquez ici pour voir les détails.',
-    link: '/details-1',
+    link: '/process/classic',
   },
   {
     title: 'Step by step 🔒',// 'Étape par étape 🔒'
     content: 'A step-by-step website build tailored to your pace and needs. Perfect to test an idea, scale gradually, or adjust your budget along the way.\\nClick here to see the details.',
             // 'Une construction étape par étape, selon votre rythme et vos besoins. 
             // Idéal pour tester une idée, avancer par blocs ou adapter son budget au fil du projet.\\Cliquez ici pour voir les détails.',  
-    link: '/details-2',
+    link: '/process/step-by-step',
   },
   {
     title: 'Quick Launch Website ⚡', //'Site express ⚡',
     content: 'A fast-deployment site delivered in 1 week for immediate online presence. Ideal for freelancers, small businesses, or urgent launches.\\nClick here to see the details.',
             // Un site rapide à déployer en 1 semaine, pour une présence en ligne immédiate.
             // Parfait pour les indépendants, petites structures ou lancements urgents.\\Cliquez ici pour voir les détails.',
-    link: '/details-3',
+    link: '/process/express',
   },
   {
     title: 'Iterative Build 📈', //'Site évolutif 📈',
     content: 'An agile method for projects that grow with you. We launch a first version (MVP), then improve it iteratively based on feedback and user needs.\\nClick here to see the details.',
             // 'Une méthode agile pour des projets qui grandissent avec vous. 
             // On lance une première version (MVP), puis on l’améliore de manière itérative selon les retours et besoins utilisateurs.\\Cliquez ici pour voir les détails.',
-    link: '/details-4',
+    link: '/process/iterative',
   },
   {
     title: 'All-Inclusive Website 🎁', //'Site tout compris 🎁',
     content: 'You don’t have to worry about a thing — we handle everything. Content, design, development, SEO... You get a ready-to-use website, polished from A to Z.\\nClick here to see the details.',
             // 'Vous n’avez rien à gérer, on s’occupe de tout. 
             // Contenu, design, développement, SEO... Vous recevez un site prêt à l’emploi, peaufiné de A à Z.\\Cliquez ici pour voir les détails.',
-    link: '/details-5',
+    link: '/process/all-inclusive',
   },
 ];
 

@@ -10,6 +10,11 @@ import Contact from "./pages/Contact/Contact";
 import About from "./pages/About/About";
 import Services from "./pages/Services/Services";
 import HowItWorks from "./pages/HowItWorks/HowItWorks";
+import ProcessClassic from './pages/Process/Classic';
+import ProcessStepByStep from './pages/Process/StepByStep';
+import ProcessExpress from './pages/Process/Express';
+import ProcessIterative from './pages/Process/Iterative';
+import ProcessAllInclusive from './pages/Process/AllInclusive';
 
 
 const App = () => {
@@ -65,6 +70,11 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/how-it-works" element={<HowItWorks />} />
+          <Route path="/process/classic" element={<ProcessClassic />} />
+          <Route path="/process/step-by-step" element={<ProcessStepByStep />} />
+          <Route path="/process/express" element={<ProcessExpress />} />
+          <Route path="/process/iterative" element={<ProcessIterative />} />
+          <Route path="/process/all-inclusive" element={<ProcessAllInclusive />} />
         </Routes>
       </div>
     </Router>
