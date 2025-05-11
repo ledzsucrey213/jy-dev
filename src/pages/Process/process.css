@@ -1,4 +1,6 @@
 .process-page {
+  position: relative; /* indispensable pour que z-index fonctionne */
+  z-index: 2; /* plus haut que le canvas des particules */
   max-width: 1200px;
   margin: 4rem auto;
   padding: 3rem 2rem;
@@ -8,6 +10,7 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
+
 
   
   .process-title {
@@ -72,3 +75,13 @@
     font-size: 0.95rem;
   }
   
+.process-notes {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #eee;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 0.5rem;
+  white-space: pre-wrap;
+}
