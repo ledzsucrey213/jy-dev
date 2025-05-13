@@ -11,8 +11,11 @@
     "start": "vite preview"
   },
   "dependencies": {
+    "i18next": "^25.1.2",
+    "i18next-browser-languagedetector": "^8.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-i18next": "^15.5.1",
     "react-router-dom": "^7.5.3",
     "react-svg-blob": "^0.3.1",
     "react-tsparticles": "^2.12.2",

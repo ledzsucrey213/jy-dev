@@ -1,7 +1,51 @@
 import React, { useState } from "react";
+import { useLanguage } from "../../context/LanguageContext";
 import "./Contact.css";
 
 const Contact = () => {
+  const { language } = useLanguage();
+
+  const labels = {
+    fr: {
+      title: "Contactez-nous",
+      subtitle: "Nous vous répondrons dans les 48 heures.",
+      name: "Nom *",
+      company: "Entreprise",
+      email: "Email *",
+      phone: "Numéro de téléphone *",
+      needPlaceholder: "De quoi avez-vous besoin ?",
+      web: "Application Web",
+      mobile: "Application Mobile",
+      both: "Applications Web & Mobile",
+      message: "Parlez-nous de votre projet...",
+      submit: "ENVOYER",
+      whatsapp: "WHATSAPP",
+      emailTitle: "EMAIL",
+      success: "Message envoyé avec succès !",
+      error: "Une erreur est survenue.",
+    },
+    en: {
+      title: "Contact us",
+      subtitle: "We will get back to you in the next 48 hours.",
+      name: "Name *",
+      company: "Company",
+      email: "Email *",
+      phone: "Phone Number *",
+      needPlaceholder: "What do you need?",
+      web: "Web Application",
+      mobile: "Mobile Application",
+      both: "Both Web & Mobile Applications",
+      message: "Tell us more...",
+      submit: "SUBMIT",
+      whatsapp: "WHATSAPP",
+      emailTitle: "EMAIL",
+      success: "Message sent successfully!",
+      error: "An error occurred.",
+    },
+  };
+
+  const t = labels[language];
+
   const [formData, setFormData] = useState({
     name: "",
     company: "",
@@ -26,7 +70,7 @@ const Contact = () => {
         body: JSON.stringify(formData),
         headers: { "Content-Type": "application/json" },
       });
-      alert("Message envoyé avec succès !");
+      alert(t.success);
       setFormData({
         name: "",
         company: "",
@@ -36,7 +80,7 @@ const Contact = () => {
         message: "",
       });
     } catch (error) {
-      alert("Une erreur est survenue.");
+      alert(t.error);
       console.error(error);
     }
   };
@@ -44,14 +88,14 @@ const Contact = () => {
   return (
     <div className="contact-container">
       <div className="contact-form">
-        <h2>Contact us</h2>
-        <p>We will get back to you in the next 48 hours.</p>
+        <h2>{t.title}</h2>
+        <p>{t.subtitle}</p>
         <form onSubmit={handleSubmit}>
           <div className="form-row">
             <input
               type="text"
               name="name"
-              placeholder="Name *"
+              placeholder={t.name}
               value={formData.name}
               onChange={handleChange}
               required
@@ -59,7 +103,7 @@ const Contact = () => {
             <input
               type="text"
               name="company"
-              placeholder="Company"
+              placeholder={t.company}
               value={formData.company}
               onChange={handleChange}
             />
@@ -68,7 +112,7 @@ const Contact = () => {
             <input
               type="email"
               name="email"
-              placeholder="Email *"
+              placeholder={t.email}
               value={formData.email}
               onChange={handleChange}
               required
@@ -76,7 +120,7 @@ const Contact = () => {
             <input
               type="tel"
               name="phone"
-              placeholder="Phone Number *"
+              placeholder={t.phone}
               value={formData.phone}
               onChange={handleChange}
               required
@@ -84,27 +128,26 @@ const Contact = () => {
           </div>
           <div className="form-row">
             <select name="need" value={formData.need} onChange={handleChange} required>
-              <option disabled value="">What do you need?</option>
-              <option>Web Application</option>
-              <option>Mobile Application</option>
-              <option>Both Web & Mobile Applications</option>
+              <option disabled value="">{t.needPlaceholder}</option>
+              <option>{t.web}</option>
+              <option>{t.mobile}</option>
+              <option>{t.both}</option>
             </select>
           </div>
           <textarea
             name="message"
-            placeholder="Tell us more..."
+            placeholder={t.message}
             rows="5"
             value={formData.message}
             onChange={handleChange}
           ></textarea>
-          <button type="submit">SUBMIT</button>
+          <button type="submit">{t.submit}</button>
         </form>
       </div>
 
-      {/* Coordonnées */}
       <div className="contact-info">
         <div className="info-block">
-          <h3>WHATSAPP</h3>
+          <h3>{t.whatsapp}</h3>
           <ul>
             <li>
               <img src="/whatsapp.png" alt="whatsapp" />
@@ -122,7 +165,7 @@ const Contact = () => {
         </div>
 
         <div className="info-block2">
-          <h3>EMAIL</h3>
+          <h3>{t.emailTitle}</h3>
           <li>
             <img src="/mail.png" alt="email" />
             <span>yanis.baroudi36@gmail.com</span>
