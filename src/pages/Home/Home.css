@@ -60,6 +60,21 @@
       transform: translateY(-30px) scale(1.1);
     }
   }
+
+
+  @media screen and (max-width: 768px) {
+  .slogan {
+    font-size: 1.8rem;
+    padding: 0 1rem;
+  }
+
+  .blob {
+    width: 250px;
+    height: 250px;
+    filter: blur(40px);
+  }
+}
+
   
 
 
