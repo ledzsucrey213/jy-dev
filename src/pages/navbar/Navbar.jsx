@@ -9,11 +9,20 @@ const Navbar = () => {
   const menuRef = useRef();
 
   const labels = {
-    fr: { services: "Services", how: "Comment ça marche", about: "À propos", contact: "Contact" },
-    en: { services: "Services", how: "How it works", about: "About", contact: "Contact" },
+    fr: {
+      services: "Services",
+      how: "Comment ça marche",
+      about: "À propos",
+      contact: "Contact",
+    },
+    en: {
+      services: "Services",
+      how: "How it works",
+      about: "About",
+      contact: "Contact",
+    },
   };
 
-  // Fermer le menu quand on clique à l'extérieur
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (isMenuOpen && menuRef.current && !menuRef.current.contains(event.target)) {
@@ -41,11 +50,28 @@ const Navbar = () => {
       </div>
 
       <ul className={`nav-links ${isMenuOpen ? "open" : ""}`}>
-        <li onClick={() => setIsMenuOpen(false)}><Link to="/services" className="nav-link">{labels[language].services}</Link></li>
-        <li onClick={() => setIsMenuOpen(false)}><Link to="/how-it-works" className="nav-link">{labels[language].how}</Link></li>
-        <li onClick={() => setIsMenuOpen(false)}><Link to="/about" className="nav-link">{labels[language].about}</Link></li>
+        <li onClick={() => setIsMenuOpen(false)}>
+          <Link to="/services" className="nav-link">{labels[language].services}</Link>
+        </li>
+        <li onClick={() => setIsMenuOpen(false)}>
+          <Link to="/how-it-works" className="nav-link">{labels[language].how}</Link>
+        </li>
+        <li onClick={() => setIsMenuOpen(false)}>
+          <Link to="/about" className="nav-link">{labels[language].about}</Link>
+        </li>
+
+        {/* Ajout Contact + Langue pour mobile */}
+        <li className="nav-mobile-extra">
+          <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
+            <button className="contact-button">{labels[language].contact}</button>
+          </Link>
+          <div className="lang-switch" onClick={toggleLanguage} style={{ cursor: "pointer", marginTop: "10px" }}>
+            <span className={language === "fr" ? "active-lang" : ""}>FR</span> | <span className={language === "en" ? "active-lang" : ""}>EN</span>
+          </div>
+        </li>
       </ul>
 
+      {/* Desktop seulement */}
       <div className="nav-right">
         <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
           <button className="contact-button">{labels[language].contact}</button>
