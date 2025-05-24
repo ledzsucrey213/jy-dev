@@ -3,7 +3,6 @@ import { useLanguage } from "../../context/LanguageContext";
 import './HowItWorks.css';
 import { Link } from 'react-router-dom';
 
-
 const services = {
   fr: [
     'Fonctionnement classique 🛠️',
@@ -25,51 +24,71 @@ const serviceDetails = {
   fr: [
     {
       title: 'Fonctionnement classique 🛠️',
-      content: 'Une approche simple et solide, parfaite pour les sites vitrines classiques. Chaque étape est maîtrisée, du brief à la mise en ligne, pour un rendu professionnel et à votre guise. <Link href="/process/classic" class="how-link">Cliquez ici pour voir les détails.</Link>',
+      content: 'Une approche simple et solide, parfaite pour les sites vitrines classiques. Chaque étape est maîtrisée, du brief à la mise en ligne, pour un rendu professionnel et à votre guise.',
+      link: '/process/classic',
+      linkText: 'Cliquez ici pour voir les détails.',
     },
     {
       title: 'Étape par étape 🔒',
-      content: 'Une construction étape par étape, selon votre rythme et vos besoins. Idéal pour tester une idée, avancer par blocs ou adapter son budget au fil du projet. <Link href="/process/step-by-step" class="how-link">Cliquez ici pour voir les détails.</Link>',
+      content: 'Une construction étape par étape, selon votre rythme et vos besoins. Idéal pour tester une idée, avancer par blocs ou adapter son budget au fil du projet.',
+      link: '/process/step-by-step',
+      linkText: 'Cliquez ici pour voir les détails.',
     },
     {
       title: 'Site express ⚡',
-      content: 'Un site rapide à déployer en 1 semaine, pour une présence en ligne immédiate. Parfait pour les indépendants, petites structures ou lancements urgents. <Link href="/process/express" class="how-link">Cliquez ici pour voir les détails.</Link>',
+      content: 'Un site rapide à déployer en 1 semaine, pour une présence en ligne immédiate. Parfait pour les indépendants, petites structures ou lancements urgents.',
+      link: '/process/express',
+      linkText: 'Cliquez ici pour voir les détails.',
     },
     {
       title: 'Site évolutif 📈',
-      content: 'Une méthode agile pour des projets qui grandissent avec vous. On lance une première version (MVP), puis on l’améliore de manière itérative selon les retours et besoins utilisateurs. <Link href="/process/iterative" class="how-link">Cliquez ici pour voir les détails.</Link>',
+      content: 'Une méthode agile pour des projets qui grandissent avec vous. On lance une première version (MVP), puis on l’améliore de manière itérative selon les retours et besoins utilisateurs.',
+      link: '/process/iterative',
+      linkText: 'Cliquez ici pour voir les détails.',
     },
     {
       title: 'Site tout compris 🎁',
-      content: 'Vous n’avez rien à gérer, on s’occupe de tout. Contenu, design, développement, SEO... Vous recevez un site prêt à l’emploi, peaufiné de A à Z. <Link href="/process/all-inclusive" class="how-link">Cliquez ici pour voir les détails.</Link>',
+      content: 'Vous n’avez rien à gérer, on s’occupe de tout. Contenu, design, développement, SEO... Vous recevez un site prêt à l’emploi, peaufiné de A à Z.',
+      link: '/process/all-inclusive',
+      linkText: 'Cliquez ici pour voir les détails.',
     },
   ],
   en: [
     {
       title: 'Classic Way 🛠️',
-      content: 'A clear and reliable approach, perfect for classic showcase websites. Each step is well-managed — from brief to launch — for a smooth and professional result. <Link href="/process/classic" class="how-link">Click here to see the details.</Link>',
+      content: 'A clear and reliable approach, perfect for classic showcase websites. Each step is well-managed — from brief to launch — for a smooth and professional result.',
+      link: '/process/classic',
+      linkText: 'Click here to see the details.',
     },
     {
       title: 'Step by step 🔒',
-      content: 'A step-by-step website build tailored to your pace and needs. Perfect to test an idea, scale gradually, or adjust your budget along the way. <Link href="/process/step-by-step" class="how-link">Click here to see the details.</Link>',
+      content: 'A step-by-step website build tailored to your pace and needs. Perfect to test an idea, scale gradually, or adjust your budget along the way.',
+      link: '/process/step-by-step',
+      linkText: 'Click here to see the details.',
     },
     {
       title: 'Quick Launch Website ⚡',
-      content: 'A fast-deployment site delivered in 1 week for immediate online presence. Ideal for freelancers, small businesses, or urgent launches. <Link href="/process/express" class="how-link">Click here to see the details.</Link>',
+      content: 'A fast-deployment site delivered in 1 week for immediate online presence. Ideal for freelancers, small businesses, or urgent launches.',
+      link: '/process/express',
+      linkText: 'Click here to see the details.',
     },
     {
       title: 'Iterative Build 📈',
-      content: 'An agile method for projects that grow with you. We launch a first version (MVP), then improve it iteratively based on feedback and user needs. <Link href="/process/iterative" class="how-link">Click here to see the details.</Link>',
+      content: 'An agile method for projects that grow with you. We launch a first version (MVP), then improve it iteratively based on feedback and user needs.',
+      link: '/process/iterative',
+      linkText: 'Click here to see the details.',
     },
     {
       title: 'All-Inclusive Website 🎁',
-      content: 'You don’t have to worry about a thing — we handle everything. Content, design, development, SEO... You get a ready-to-use website, polished from A to Z. <Link href="/process/all-inclusive" class="how-link">Click here to see the details.</Link>',
+      content: 'You don’t have to worry about a thing — we handle everything. Content, design, development, SEO... You get a ready-to-use website, polished from A to Z.',
+      link: '/process/all-inclusive',
+      linkText: 'Click here to see the details.',
     },
   ],
 };
 
 export default function HowItWorks() {
-  const { language } = useLanguage(); // Utilisation du contexte de langue
+  const { language } = useLanguage();
   const [activeIndex, setActiveIndex] = useState(null);
   const sectionRefs = useRef([]);
 
@@ -89,8 +108,8 @@ export default function HowItWorks() {
           {language === 'fr' ? 'Nos méthodes de travail' : 'Our Work Methods'}
         </h2>
         <p className="how-intro-text">
-          {language === 'fr' 
-            ? 'Chaque projet est unique. C’est pourquoi nous proposons plusieurs façons de collaborer. Que vous ayez besoin d’un site prêt en quelques jours, d’un accompagnement évolutif ou d’une prise en charge complète — nous avons LA méthode qui vous conviendra. Découvrez nos différentes approches et choisissez celle qui correspond le mieux à votre rythme, vos objectifs et votre budget.' 
+          {language === 'fr'
+            ? 'Chaque projet est unique. C’est pourquoi nous proposons plusieurs façons de collaborer. Que vous ayez besoin d’un site prêt en quelques jours, d’un accompagnement évolutif ou d’une prise en charge complète — nous avons LA méthode qui vous conviendra. Découvrez nos différentes approches et choisissez celle qui correspond le mieux à votre rythme, vos objectifs et votre budget.'
             : 'Because every project is unique, we offer multiple ways of working. Whether you\'re in a hurry to launch, need time to iterate, or want us to handle everything for you — we’ve got the workflow that fits you the best. Take a look at our different approaches and choose the one that matches your rhythm, your goals, and your budget.'}
         </p>
       </div>
@@ -141,7 +160,12 @@ export default function HowItWorks() {
               </div>
               <div className={`how-content-wrapper ${isActive ? 'open' : ''}`}>
                 <div className="how-content-inner">
-                  <p className="how-description" dangerouslySetInnerHTML={{ __html: detail.content }} />
+                  <p className="how-description">
+                    {detail.content}{' '}
+                    <Link to={detail.link} className="how-link">
+                      {detail.linkText}
+                    </Link>
+                  </p>
                 </div>
               </div>
             </div>
