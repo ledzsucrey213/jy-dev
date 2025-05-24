@@ -1,6 +1,8 @@
 import React, { useState, useRef } from 'react';
 import { useLanguage } from "../../context/LanguageContext";
 import './HowItWorks.css';
+import { Link } from 'react-router-dom';
+
 
 const services = {
   fr: [
@@ -23,45 +25,45 @@ const serviceDetails = {
   fr: [
     {
       title: 'Fonctionnement classique 🛠️',
-      content: 'Une approche simple et solide, parfaite pour les sites vitrines classiques. Chaque étape est maîtrisée, du brief à la mise en ligne, pour un rendu professionnel et à votre guise. <a href="/process/classic" class="how-link">Cliquez ici pour voir les détails.</a>',
+      content: 'Une approche simple et solide, parfaite pour les sites vitrines classiques. Chaque étape est maîtrisée, du brief à la mise en ligne, pour un rendu professionnel et à votre guise. <Link href="/process/classic" class="how-link">Cliquez ici pour voir les détails.</Link>',
     },
     {
       title: 'Étape par étape 🔒',
-      content: 'Une construction étape par étape, selon votre rythme et vos besoins. Idéal pour tester une idée, avancer par blocs ou adapter son budget au fil du projet. <a href="/process/step-by-step" class="how-link">Cliquez ici pour voir les détails.</a>',
+      content: 'Une construction étape par étape, selon votre rythme et vos besoins. Idéal pour tester une idée, avancer par blocs ou adapter son budget au fil du projet. <Link href="/process/step-by-step" class="how-link">Cliquez ici pour voir les détails.</Link>',
     },
     {
       title: 'Site express ⚡',
-      content: 'Un site rapide à déployer en 1 semaine, pour une présence en ligne immédiate. Parfait pour les indépendants, petites structures ou lancements urgents. <a href="/process/express" class="how-link">Cliquez ici pour voir les détails.</a>',
+      content: 'Un site rapide à déployer en 1 semaine, pour une présence en ligne immédiate. Parfait pour les indépendants, petites structures ou lancements urgents. <Link href="/process/express" class="how-link">Cliquez ici pour voir les détails.</Link>',
     },
     {
       title: 'Site évolutif 📈',
-      content: 'Une méthode agile pour des projets qui grandissent avec vous. On lance une première version (MVP), puis on l’améliore de manière itérative selon les retours et besoins utilisateurs. <a href="/process/iterative" class="how-link">Cliquez ici pour voir les détails.</a>',
+      content: 'Une méthode agile pour des projets qui grandissent avec vous. On lance une première version (MVP), puis on l’améliore de manière itérative selon les retours et besoins utilisateurs. <Link href="/process/iterative" class="how-link">Cliquez ici pour voir les détails.</Link>',
     },
     {
       title: 'Site tout compris 🎁',
-      content: 'Vous n’avez rien à gérer, on s’occupe de tout. Contenu, design, développement, SEO... Vous recevez un site prêt à l’emploi, peaufiné de A à Z. <a href="/process/all-inclusive" class="how-link">Cliquez ici pour voir les détails.</a>',
+      content: 'Vous n’avez rien à gérer, on s’occupe de tout. Contenu, design, développement, SEO... Vous recevez un site prêt à l’emploi, peaufiné de A à Z. <Link href="/process/all-inclusive" class="how-link">Cliquez ici pour voir les détails.</Link>',
     },
   ],
   en: [
     {
       title: 'Classic Way 🛠️',
-      content: 'A clear and reliable approach, perfect for classic showcase websites. Each step is well-managed — from brief to launch — for a smooth and professional result. <a href="/process/classic" class="how-link">Click here to see the details.</a>',
+      content: 'A clear and reliable approach, perfect for classic showcase websites. Each step is well-managed — from brief to launch — for a smooth and professional result. <Link href="/process/classic" class="how-link">Click here to see the details.</Link>',
     },
     {
       title: 'Step by step 🔒',
-      content: 'A step-by-step website build tailored to your pace and needs. Perfect to test an idea, scale gradually, or adjust your budget along the way. <a href="/process/step-by-step" class="how-link">Click here to see the details.</a>',
+      content: 'A step-by-step website build tailored to your pace and needs. Perfect to test an idea, scale gradually, or adjust your budget along the way. <Link href="/process/step-by-step" class="how-link">Click here to see the details.</Link>',
     },
     {
       title: 'Quick Launch Website ⚡',
-      content: 'A fast-deployment site delivered in 1 week for immediate online presence. Ideal for freelancers, small businesses, or urgent launches. <a href="/process/express" class="how-link">Click here to see the details.</a>',
+      content: 'A fast-deployment site delivered in 1 week for immediate online presence. Ideal for freelancers, small businesses, or urgent launches. <Link href="/process/express" class="how-link">Click here to see the details.</Link>',
     },
     {
       title: 'Iterative Build 📈',
-      content: 'An agile method for projects that grow with you. We launch a first version (MVP), then improve it iteratively based on feedback and user needs. <a href="/process/iterative" class="how-link">Click here to see the details.</a>',
+      content: 'An agile method for projects that grow with you. We launch a first version (MVP), then improve it iteratively based on feedback and user needs. <Link href="/process/iterative" class="how-link">Click here to see the details.</Link>',
     },
     {
       title: 'All-Inclusive Website 🎁',
-      content: 'You don’t have to worry about a thing — we handle everything. Content, design, development, SEO... You get a ready-to-use website, polished from A to Z. <a href="/process/all-inclusive" class="how-link">Click here to see the details.</a>',
+      content: 'You don’t have to worry about a thing — we handle everything. Content, design, development, SEO... You get a ready-to-use website, polished from A to Z. <Link href="/process/all-inclusive" class="how-link">Click here to see the details.</Link>',
     },
   ],
 };
