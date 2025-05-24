@@ -222,3 +222,64 @@
     opacity: 1;
   }
   
+
+@media screen and (max-width: 768px) {
+  .how-intro-title {
+    font-size: 2.4rem;
+    text-align: center;
+  }
+
+  .how-intro-text {
+    font-size: 1.1rem;
+    padding: 0 1rem;
+    text-align: justify;
+  }
+
+  .how-tags {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .how-tag {
+    width: 100%;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .how-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .how-number {
+    font-size: 2rem;
+    min-width: unset;
+    color: rgba(255, 255, 255, 0.1);
+  }
+
+  .how-title {
+    font-size: 1.5rem;
+    text-align: left;
+    width: 100%;
+  }
+
+  .how-toggle {
+    align-self: flex-end;
+    margin-top: 0.5rem;
+  }
+
+  .how-content-inner {
+    margin-left: 0;
+    padding: 0;
+  }
+
+  .how-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    padding: 0.5rem 0;
+  }
+
+  .how-item.open {
+    padding: 1rem 0;
+  }
+}

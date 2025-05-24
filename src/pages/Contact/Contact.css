@@ -126,6 +126,38 @@
     margin-left: 5px;
   }
 
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  input, select, textarea {
+    width: 100%;
+  }
+
+  .contact-info {
+    flex: 1;
+  }
+
+  .info-block li,
+  .info-block2 li {
+    align-items: flex-start;
+  }
+
+  .info-block img,
+  .info-block2 img {
+    width: 30px;
+    height: 25px;
+  }
+}
+
   
 
   
