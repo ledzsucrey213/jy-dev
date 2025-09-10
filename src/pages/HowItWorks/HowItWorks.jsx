@@ -137,7 +137,9 @@ export default function HowItWorks() {
             >
               <div className="how-header">
                 <div className="how-number">{String(index + 1).padStart(2, '0')}</div>
-                <h3 className="how-title">{detail.title}</h3>
+                <h3 className="how-title"
+                  onClick={() => handleToggle(index)}
+                  style={{ cursor: 'pointer' }} >{detail.title}</h3>
                 <button
                   className={`how-toggle ${isActive ? 'rotated' : ''}`}
                   onClick={() => handleToggle(index)}
