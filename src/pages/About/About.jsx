@@ -12,6 +12,7 @@ const About = () => {
         "Nous sommes une équipe passionnée de designers, développeurs et stratèges dédiée à la transformation des idées en produits numériques percutants. Notre mission est de donner du pouvoir aux entreprises grâce à des applications web et mobiles sur mesure qui allient performance et excellence esthétique. Nous nous efforçons également de rendre ces solutions accessibles — offrant des sites web et des applications mobiles à des prix raisonnables et réalisables pour les entreprises de toutes tailles, avec des délais de livraison optimisés pour répondre aux plannings les plus exigeants.",
       creating: "Création d'<span className='highlight'>expériences numériques</span> pour des marques tournées vers l'avenir",
       team: "L'équipe",
+      extra: "Nos talents s'épanouissent face aux défis, à l'innovation et à la collaboration. Nous construisons des solutions logicielles évolutives et intuitives en mettant l'humain et le design au premier plan, garantissant que chaque projet — qu'il s'agisse d'une petite startup ou d'une grande entreprise — bénéficie de notre engagement envers la qualité, l'accessibilité et la rapidité d'exécution.",
       teamMembers: [
         { name: "Yanis Baroudi", role: "Développeur", img: "/avatar1.png" },
         { name: "Jalil Chaibderraine", role: "Développeur", img: "/avatar2.png" },
@@ -31,6 +32,7 @@ const About = () => {
         "We are a passionate team of designers, developers, and strategists dedicated to transforming ideas into impactful digital products. Our mission is to empower businesses through tailored web and mobile applications that deliver both performance and aesthetic excellence. We also strive to make these solutions accessible—offering websites and mobile apps at reasonable, achievable prices for companies of all sizes, with delivery times optimized to meet even the most demanding schedules.",
       creating: "Creating <span className='highlight'>digital experiences</span> for forward-thinking brands",
       team: "The Team",
+      extra: "Our talents thrive on challenge, innovation, and collaboration. We build scalable and intuitive software solutions by putting people and design first, ensuring every project—whether for a small startup or a large enterprise—benefits from our commitment to quality, affordability, and rapid turnaround.",
       teamMembers: [
         { name: "Yanis Baroudi", role: "Developer", img: "/avatar1.png" },
         { name: "Jalil Chaibderraine", role: "Developer", img: "/avatar2.png" },
@@ -53,10 +55,8 @@ const About = () => {
         <div className="about-left">
           <h1 className="about-title-bg">{content[language].title}</h1>
           <h2 dangerouslySetInnerHTML={{ __html: content[language].creating }} />
-          <p>{content[language].intro}</p>
-          <p>
-            Our talents thrive on challenge, innovation, and collaboration. We build scalable and intuitive software solutions by putting people and design first, ensuring every project—whether for a small startup or a large enterprise—benefits from our commitment to quality, affordability, and rapid turnaround.
-          </p>
+          <p className="about-intro">{content[language].intro}</p>
+          <p>{content[language].extra}</p>
         </div>
 
         <div className="about-right">
