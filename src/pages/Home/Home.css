@@ -1,4 +1,15 @@
 /* src/pages/Home.css */
+
+@font-face {
+  font-family: 'Pacifico';
+  src: url('../assets/fonts/Pacifico-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
 .hero-section {
     position: relative;
     height: 80vh;
@@ -13,8 +24,9 @@
   }
   
   .slogan {
+    font-family: 'Pacifico';
     font-size: 3rem;
-    font-weight: bold;
+    font-weight: 400;
     z-index: 2;
     color: #fff;
     max-width: 800px;
@@ -64,14 +76,16 @@
 
   @media screen and (max-width: 768px) {
   .slogan {
-    font-size: 1.8rem;
-    padding: 0 1rem;
+    font-size: 1.5rem;     /* plus petit */
+    line-height: 1.4;      /* plus d’espace entre les lignes */
+    padding: 0 1rem;       /* un peu de marge interne */
+    margin: 1rem 0;        /* espace autour du titre */
   }
 
   .blob {
-    width: 250px;
-    height: 250px;
-    filter: blur(40px);
+    width: 220px;
+    height: 220px;
+    filter: blur(35px);
   }
 }
 
