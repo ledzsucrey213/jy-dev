@@ -40,7 +40,7 @@ const Services = () => {
           <p>{content[language].service1Description}</p>
           <p className="price-note" dangerouslySetInnerHTML={{ __html: content[language].service1Price }} />
         </div>
-        <div className="service-image">
+        <div className="service-image service-image-burger">
           <img src="/burger-website.PNG" alt="Website Example" />
         </div>
       </section>
@@ -51,7 +51,7 @@ const Services = () => {
           <p>{content[language].service2Description}</p>
           <p className="price-note" dangerouslySetInnerHTML={{ __html: content[language].service2Price }} />
         </div>
-        <div className="service-image">
+        <div className="service-image service-image-outfy">
           <img src="outfy.png" alt="Mobile App Example" style={{ width: '250px', height: 'auto', objectFit: 'contain' }}/>
         </div>
       </section>
