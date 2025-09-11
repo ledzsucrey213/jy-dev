@@ -13,7 +13,7 @@ const Navbar = () => {
       services: "Services",
       how: "Comment ça marche",
       about: "À propos",
-      contact: "LOOOOl",
+      contact: "Contact",
     },
     en: {
       services: "Services",
