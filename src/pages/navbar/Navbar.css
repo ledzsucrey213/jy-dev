@@ -189,6 +189,7 @@ body, html {
 
   .contact-button {
     background-color: #9b59b6;
+    margin-left: 0;
     color: white;
     font-weight: bold;
     padding: 0.8rem 2rem;
@@ -212,4 +213,11 @@ body, html {
   .hamburger {
     display: flex;
   }
+
+  .navbar {
+  background: rgba(26, 17, 66, 0.3); /* violet foncé transparent */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* compat iOS Safari */
+}
+
 }
