@@ -22,8 +22,19 @@ export const LanguageContext = React.createContext();
 
 const App = () => {
   const [language, setLanguage] = useState("en");
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    // Détection si l’écran est mobile
+    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  useEffect(() => {
+    if (isMobile) return; // ✅ Ne pas activer le curseur custom sur mobile
     const cursor = document.createElement("div");
     cursor.classList.add("custom-cursor");
     document.body.appendChild(cursor);
@@ -39,7 +50,7 @@ const App = () => {
       window.removeEventListener("mousemove", moveCursor);
       document.body.removeChild(cursor);
     };
-  }, []);
+  }, [isMobile]);
 
   const particlesInit = async (engine) => {
     await loadSlim(engine);
@@ -56,11 +67,11 @@ const App = () => {
             background: { color: "#0C0D40" },
             fpsLimit: 60,
             particles: {
-              number: { value: 10 },
+              number: { value: isMobile ? 4 : 10 }, // ✅ moins de particules sur mobile
               color: { value: "#ffffff" },
               shape: { type: "circle" },
               opacity: { value: 0.15 },
-              size: { value: 200, random: true },
+              size: { value: isMobile ? 100 : 200, random: true }, // ✅ plus petites sur mobile
               move: { enable: true, speed: 1 },
             },
             detectRetina: true,
@@ -85,5 +96,6 @@ const App = () => {
     </LanguageProvider>
   );
 };
+
 
 export default App;
