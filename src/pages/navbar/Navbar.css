@@ -188,16 +188,24 @@ html {
     gap: 10px;
   }
 
+  /* Contact button spécial mobile (patch iOS Safari) */
   .contact-button {
-    background-color: #9b59b6;
-    color: white;
+    all: unset; /* reset total Safari iOS */
+    display: inline-block;
+    background-color: #9b59b6 !important;
+    color: white !important;
     font-weight: bold;
     padding: 0.8rem 2rem;
     border-radius: 2rem;
     font-size: 1rem;
     margin-bottom: 1rem;
     cursor: pointer;
-    text-decoration: none;
+    text-decoration: none !important;
+    text-align: center;
+  }
+
+  .contact-button:hover {
+    background-color: rgba(129, 18, 249, 0.75) !important;
   }
 
   .lang-switch {
