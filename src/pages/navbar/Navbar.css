@@ -5,7 +5,8 @@
   box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
   width: 100%;
 }
 
@@ -95,16 +96,18 @@ body, html {
   justify-content: flex-end;
 }
 
+/* Contact button (appliqué sur le Link directement) */
 .contact-button {
+  display: inline-block;
   background-color: rgba(173, 97, 255, 0.75);
-  border: none;
   color: white;
   font-weight: 500;
   padding: 10px 20px;
   border-radius: 25px;
   cursor: pointer;
+  text-decoration: none;
+  font-size: 1rem;
   transition: background-color 0.3s;
-  margin-left: 20px;
 }
 
 .contact-button:hover {
@@ -142,28 +145,25 @@ body, html {
   display: none;
 }
 
-
 /* Mobile Styles */
 @media (max-width: 768px) {
   .nav-links {
-  position: absolute;
-  top: 120px;
-  right: 0;
-  width: 100vw;
-  padding: 2rem 1rem;
-  border-radius: 10px;
-  background-color: #1a1142; /* Violet foncé, uni */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  transform: translateX(120%);
-  transition: transform 0.3s ease-in-out;
-  z-index: 999;
-  gap: 1.5rem;
-}
-
-
+    position: absolute;
+    top: 120px;
+    right: 0;
+    width: 100vw;
+    padding: 2rem 1rem;
+    border-radius: 10px;
+    background-color: #1a1142; /* Violet foncé, uni */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    transform: translateX(120%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 999;
+    gap: 1.5rem;
+  }
 
   .nav-links.open {
     transform: translateX(0);
@@ -190,15 +190,14 @@ body, html {
 
   .contact-button {
     background-color: #9b59b6;
-    margin-left: 0;
     color: white;
     font-weight: bold;
     padding: 0.8rem 2rem;
-    border: none;
     border-radius: 2rem;
     font-size: 1rem;
     margin-bottom: 1rem;
     cursor: pointer;
+    text-decoration: none;
   }
 
   .lang-switch {
@@ -216,9 +215,8 @@ body, html {
   }
 
   .navbar {
-  background: rgba(26, 17, 66, 0.3); /* violet foncé transparent */
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px); /* compat iOS Safari */
-}
-
+    background: rgba(26, 17, 66, 0.3); /* violet foncé transparent */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* compat iOS Safari */
+  }
 }
