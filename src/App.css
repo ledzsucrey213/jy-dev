@@ -138,3 +138,19 @@ body {
 *, button, a, input, textarea, select {
   cursor: none !important; /* Masque le curseur par défaut sur les boutons et les liens */
 }
+
+/* ✅ Désactiver le curseur violet sur mobile */
+@media (max-width: 768px) {
+  body {
+    cursor: auto !important; /* Réactive le curseur normal */
+  }
+
+  *, button, a, input, textarea, select {
+    cursor: auto !important; /* Empêche le curseur custom de forcer */
+  }
+
+  .custom-cursor {
+    display: none !important; /* Cache complètement le curseur violet */
+  }
+}
+

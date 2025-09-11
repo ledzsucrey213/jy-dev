@@ -95,14 +95,17 @@
     margin-top: 1rem;
   }
 
+  /* ✅ Rendre le titre visible */
   .services-title-bg {
-    font-size: 2.5rem;
-    top: -20px;
+    font-size: 2.2rem;   /* un peu plus petit */
+    top: 40px;          /* descendre le titre */
   }
 
+  /* ✅ Réduire taille des textes */
   .service-content h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;   /* titre plus petit */
   }
+
 
   .service-content p {
     font-size: 0.95rem;
