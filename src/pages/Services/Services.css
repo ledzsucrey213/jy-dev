@@ -127,7 +127,7 @@
   /* ✅ Image burger agrandie sur mobile */
   .service-image-burger img {
     width: 100%;
-    max-width: 550px; /* agrandi par rapport au desktop */
+    max-width: 650px; /* agrandi par rapport au desktop */
   }
 
   /* ✅ Image Outfy contrôlée sur mobile */
