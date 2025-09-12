@@ -203,8 +203,19 @@ html {
     border: none; /* ✅ évite le fond blanc iOS */
   }
 
+
+  .nav-links li:hover {
+    background-color: transparent !important;
+    transform: none !important;
+    box-shadow: none !important;
+  }
+
+  .nav-links li:hover .nav-link {
+    color: white !important;
+  }
+
   .contact-button:hover {
-    background-color: rgba(129, 18, 249, 0.75);
+    background-color: rgba(173, 97, 255, 0.75) !important;
   }
 
   .contact-button:visited,
