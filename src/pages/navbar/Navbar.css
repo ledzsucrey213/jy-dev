@@ -145,7 +145,6 @@ html {
   display: none;
 }
 
-/* Mobile Styles */
 @media (max-width: 768px) {
   .nav-links {
     position: absolute;
@@ -188,24 +187,33 @@ html {
     gap: 10px;
   }
 
-  /* Contact button spécial mobile (patch iOS Safari) */
+  /* Contact button spécial mobile */
   .contact-button {
-    all: unset; /* reset total Safari iOS */
     display: inline-block;
-    background-color: #9b59b6 !important;
-    color: white !important;
+    background-color: #9b59b6;
+    color: white;
     font-weight: bold;
     padding: 0.8rem 2rem;
     border-radius: 2rem;
     font-size: 1rem;
     margin-bottom: 1rem;
     cursor: pointer;
-    text-decoration: none !important;
+    text-decoration: none;
     text-align: center;
+    border: none; /* ✅ évite le fond blanc iOS */
   }
 
   .contact-button:hover {
-    background-color: rgba(129, 18, 249, 0.75) !important;
+    background-color: rgba(129, 18, 249, 0.75);
+  }
+
+  .contact-button:visited,
+  .contact-button:focus,
+  .contact-button:active {
+    background-color: #9b59b6;
+    color: white;
+    outline: none;
+    box-shadow: none;
   }
 
   .lang-switch {
