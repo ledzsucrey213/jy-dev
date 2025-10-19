@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { useLanguage } from "../../context/LanguageContext";
 import "./Contact.css";
+import whatsappIcon from "../../assets/icons/whatsapp.png";
+import mailIcon from "../../assets/icons/mail.png";
 
 const Contact = () => {
   const { language } = useLanguage();
@@ -150,15 +152,15 @@ const Contact = () => {
           <h3>{t.whatsapp}</h3>
           <ul>
             <li>
-              <img src="/whatsapp.png" alt="whatsapp" />
+              <img src={whatsappIcon} alt="whatsapp" />
               <span>Yanis Baroudi<br />+33 7 82 53 81 46</span>
             </li>
             <li>
-              <img src="/whatsapp.png" alt="whatsapp" />
+              <img src={whatsappIcon} alt="whatsapp" />
               <span>Jalil Chaibderraine<br />+33 6 10 99 08 78</span>
             </li>
             <li>
-              <img src="/whatsapp.png" alt="whatsapp" />
+              <img src={whatsappIcon} alt="whatsapp" />
               <span>Fethi Aziria<br />+33 7 81 77 42 45</span>
             </li>
           </ul>
@@ -167,7 +169,7 @@ const Contact = () => {
         <div className="info-block2">
           <h3>{t.emailTitle}</h3>
           <li>
-            <img src="/mail.png" alt="email" />
+            <img src={mailIcon} alt="email" />
             <span>yanis.baroudi36@gmail.com</span>
           </li>
         </div>

@@ -1,6 +1,10 @@
 import React from "react";
 import { useLanguage } from "../../context/LanguageContext";
 import "./About.css";
+import avatar1 from "../../assets/images/avatar1.png";
+import avatar2 from "../../assets/images/avatar2.png";
+import avatar3 from "../../assets/images/avatar3.png";
+import developer from "../../assets/images/developer.jpg";
 
 const About = () => {
   const { language } = useLanguage();
@@ -14,9 +18,9 @@ const About = () => {
       team: "L'équipe",
       extra: "Nos talents s'épanouissent face aux défis, à l'innovation et à la collaboration. Nous construisons des solutions logicielles évolutives et intuitives en mettant l'humain et le design au premier plan, garantissant que chaque projet — qu'il s'agisse d'une petite startup ou d'une grande entreprise — bénéficie de notre engagement envers la qualité, l'accessibilité et la rapidité d'exécution.",
       teamMembers: [
-        { name: "Yanis Baroudi", role: "Développeur", img: "/avatar1.png" },
-        { name: "Jalil Chaibderraine", role: "Développeur", img: "/avatar2.png" },
-        { name: "Fethi Aziria", role: "Commercial", img: "/avatar3.png" },
+        { name: "Yanis Baroudi", role: "Développeur", img: avatar2},
+        { name: "Jalil Chaibderraine", role: "Développeur", img: avatar1 },
+        { name: "Fethi Aziria", role: "Commercial", img: avatar3 },
       ],
       whyChoose: "Pourquoi nous choisir ?",
       reasons: [
@@ -60,7 +64,7 @@ const About = () => {
         </div>
 
         <div className="about-right">
-          <img src="/developer.jpg" alt="Team" className="about-image" />
+          <img src={developer} alt="Team" className="about-image" />
         </div>
       </div>
 

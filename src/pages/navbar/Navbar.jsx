@@ -41,10 +41,11 @@ const Navbar = () => {
 
   return (
     <nav className="navbar" ref={menuRef}>
-      <div className="logo">
+      <Link to="/" className="logo">
         <div className="logo-circle">JY's</div>
         <span className="logo-text">DEV</span>
-      </div>
+      </Link>
+
 
       {/* Hamburger icon */}
       <div className="hamburger" onClick={() => setIsMenuOpen(!isMenuOpen)}>
