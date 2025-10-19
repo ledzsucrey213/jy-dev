@@ -41,7 +41,7 @@ const Services = () => {
           <p className="price-note" dangerouslySetInnerHTML={{ __html: content[language].service1Price }} />
         </div>
         <div className="service-image service-image-burger">
-          <img src="/burger-website.PNG" alt="Website Example" />
+          <img src="/burger-website.png" alt="Website Example" />
         </div>
       </section>
 
