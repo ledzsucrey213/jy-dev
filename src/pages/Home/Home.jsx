@@ -1,11 +1,17 @@
 // src/pages/Home.js
-import React from "react";
+import React, { useEffect } from "react";
 import { useLanguage } from "../../context/LanguageContext";
 import "./Home.css"; // si tu as du CSS
 import logo from "../../assets/images/logo.png";
 
 const Home = () => {
   const { language } = useLanguage();
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = logo;
+  }, []);
+
 
   const labels = {
     en: {
