@@ -36,7 +36,7 @@ const serviceDetails = {
     },
     {
       title: 'Site express ⚡',
-      content: 'Un site rapide à déployer en 1 semaine, pour une présence en ligne immédiate. Parfait pour les indépendants, petites structures ou lancements urgents.',
+      content: 'Un site rapide à déployer rapidement, pour une présence en ligne immédiate. Parfait pour les indépendants, petites structures ou lancements urgents.',
       link: '/process/express',
       linkText: 'Cliquez ici pour voir les détails.',
     },
