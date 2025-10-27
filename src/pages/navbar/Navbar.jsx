@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "../../context/LanguageContext";
 import "./Navbar.css";
+import logo from "../../assets/images/logo.png"; // 🟣 adapte le chemin si besoin
 
 const Navbar = () => {
   const { language, toggleLanguage } = useLanguage();
@@ -42,10 +43,14 @@ const Navbar = () => {
   return (
     <nav className="navbar" ref={menuRef}>
       <Link to="/" className="logo">
-        <div className="logo-circle">JY's</div>
-        <span className="logo-text">DEV</span>
+        {/* 🟣 Logo remplacé ici */}
+        <img
+          src={logo}
+          alt="JY Dev Logo"
+          style={{ width: 40, height: 40, borderRadius: "50%" }}
+        />
+        <span className="logo-text">Solutions</span>
       </Link>
-
 
       {/* Hamburger icon */}
       <div className="hamburger" onClick={() => setIsMenuOpen(!isMenuOpen)}>
