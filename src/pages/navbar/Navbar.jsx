@@ -11,13 +11,11 @@ const Navbar = () => {
 
   const labels = {
     fr: {
-      services: "Services",
       how: "Comment ça marche",
       about: "À propos",
       contact: "Contact",
     },
     en: {
-      services: "Services",
       how: "How it works",
       about: "About",
       contact: "Contact",
@@ -60,11 +58,6 @@ const Navbar = () => {
       </div>
 
       <ul className={`nav-links ${isMenuOpen ? "open" : ""}`}>
-        <li onClick={() => setIsMenuOpen(false)}>
-          <Link to="/services" className="nav-link">
-            {labels[language].services}
-          </Link>
-        </li>
         <li onClick={() => setIsMenuOpen(false)}>
           <Link to="/how-it-works" className="nav-link">
             {labels[language].how}

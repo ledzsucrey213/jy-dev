@@ -12,7 +12,7 @@
 .services-title-bg {
   font-size: 4rem;
   font-weight: 800;
-  color: rgba(255, 255, 255, 0.05);
+  color: rgba(173, 97, 255, 0.20);
   position: absolute;
   top: 40px;
   left: 2rem;
@@ -41,6 +41,8 @@
   font-size: 1.8rem;
   font-weight: bold;
   margin-bottom: 1rem;
+  
+  
 }
 
 .service-content p {
