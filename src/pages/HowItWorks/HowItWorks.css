@@ -17,7 +17,7 @@
   }
   
   .how-intro-title {
-    color: rgba(255, 255, 255, 0.07);
+    color: rgba(173, 97, 255, 0.20);
     font-size: 4.2rem;
     font-weight: 800;
     margin-bottom: 1rem;
@@ -218,7 +218,7 @@
   }
   
   .how-content-wrapper.open {
-    max-height: 300px; /* suffisamment pour ton contenu */
+    max-height: none; /* suffisamment pour ton contenu */
     opacity: 1;
   }
   
@@ -283,4 +283,38 @@
   .how-item.open {
     padding: 1rem 0;
   }
+}
+
+
+.process-mini-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #b998ff;
+  margin-bottom: 1.2rem;
+}
+
+.process-mini-step {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.process-mini-subtitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #cdbaff;
+  margin-bottom: 0.25rem;
+}
+
+.process-mini-desc {
+  color: #ddd;
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+}
+
+.process-mini-notes {
+  font-size: 0.9rem;
+  color: #bbb;
+  white-space: pre-wrap;
 }
